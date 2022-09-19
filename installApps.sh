@@ -1,11 +1,21 @@
 #!/bin/bash
 
+#Wget
+sudo apt install wget -y
+
 #Chrome
 sudo apt update 
 sudo apt install wget -y
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 sudo apt-get install -f
+rm google-chrome-stable_current_amd64.deb
+
+#Webapp Manager
+sudo apt update 
+wget http://packages.linuxmint.com/pool/main/w/webapp-manager/webapp-manager_1.2.5_all.deb
+sudo apt install ./webapp-manager_1.2.5_all.deb -y
+rm webapp-manager_1.2.5_all.deb
 
 #Visual Studio Code
 sudo apt-get install wget gpg
